@@ -1,5 +1,7 @@
+var os = require("os");
 
-module.exports=function(req,res){
+module.exports = function (req, res) {
+  var networkInterfaces = os.networkInterfaces();
 
-        res.json({data:"hello, express!"})
-   }
+  res.send(networkInterfaces);
+};
