@@ -7,6 +7,9 @@ var app = express();
 var logger = require("morgan");
 app.use(logger("dev"));
 
+var compression = require("compression");
+app.use(compression());
+
 // const winston = require("./modules/logger");
 
 app.use(express.json());
