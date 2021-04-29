@@ -1,7 +1,7 @@
-var os = require("os");
+// var os = require("os");
 
 module.exports = function (req, res) {
-  var networkInterfaces = os.networkInterfaces();
-
-  res.send(process.pid);
+  // var networkInterfaces = os.networkInterfaces();
+  const pid = process.pid;
+  res.json(pid);
 };
