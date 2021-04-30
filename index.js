@@ -1,10 +1,12 @@
 require("dotenv").config();
 
-var createError = require("http-errors");
-var express = require("express");
-var cookieParser = require("cookie-parser");
-var app = express();
-var logger = require("morgan");
+const createError = require("http-errors");
+const express = require("express");
+const cookieParser = require("cookie-parser");
+const app = express();
+const logger = require("morgan");
+const cors = require("cors");
+app.use(cors());
 app.use(logger("dev"));
 
 var compression = require("compression");
