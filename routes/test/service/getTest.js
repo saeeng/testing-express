@@ -1,7 +1,14 @@
 // var os = require("os");
 
-module.exports = function (req, res) {
+module.exports = async function (req, res) {
   // var networkInterfaces = os.networkInterfaces();
-  const pid = process.pid;
+  // console.log(req.headers);
+  // console.log(res);
+
+  // const pid = process.pid;
+  // setTimeout(() => {
+  //   res.json(pid);
+  // }, 2000);
+
   res.json(pid);
 };
